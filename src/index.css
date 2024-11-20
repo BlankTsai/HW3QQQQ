@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border font-['Gilroy',sans-serif];
+  }
+
+  body {
+    @apply h-full bg-gradient-to-b from-[rgb(231,235,214)] to-[rgb(52,44,102)];
+    @apply flex justify-center items-center; /* 新增：使內容居中 */
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  h2, h3 {
+    @apply text-[#13183a];
+  }
+
+  h3, h4 {
+    @apply font-semibold;
+  }
+
+  button {
+    @apply font-bold;
+  }
+
+  /* 新增：整合原有的 CSS 樣式 */
+  .app {
+    @apply text-center;
+  }
+
+  .card {
+    @apply bg-white p-10 rounded-[15px] shadow-md max-w-[400px] m-5; /* 使用 Tailwind 的類別 */
+  }
+
+  .heading {
+    @apply text-[28px] text-[#333] mb-[30px] relative pb-[10px]; /* 使用 Tailwind 的類別 */
+  }
+
+  .heading::after {
+    content: "";
+    @apply absolute w-[50px] h-[3px] bg-[#4caf50] bottom-0 left-1/2 transform -translate-x-1/2; /* 使用 Tailwind 的類別 */
+  }
+
+  .button {
+    @apply bg-[#4caf50] text-white border-none py-[15px] px-[30px] text-[18px] rounded-[25px] cursor-pointer transition-colors duration-300 uppercase tracking-wide; /* 使用 Tailwind 的類別 */
+  }
+
+  .button:hover {
+    @apply bg-[#45a049]; /* 使用 Tailwind 的類別 */
+  }
+
+  span {
+    @apply block text-[18px] font-bold mt-[20px]; /* 使用 Tailwind 的類別 */
+  }
+}
